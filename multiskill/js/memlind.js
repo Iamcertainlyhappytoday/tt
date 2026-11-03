@@ -51,18 +51,19 @@ function checkMatch(){
     if (optionOneId == optionTwoId) {
         alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
-    }
-    if (cardsChosen[0] == cardsChosen[1]){
-        alert('You found a match!');
-        cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
-        cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
-        cards[optionOneId].removeEventListener('click', flipCard);
-        cards[optionTwoId].removeEventListener('click', flipCard);
-        cardsWon.push(cardsChosen);
     }else{
-        cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
-        cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
-         alert('Sorry try again!');
+        if (cardsChosen[0] == cardsChosen[1]){
+            alert('You found a match!');
+            cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
+            cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
+            cards[optionOneId].removeEventListener('click', flipCard);
+            cards[optionTwoId].removeEventListener('click', flipCard);
+            cardsWon.push(cardsChosen);
+        }else{
+            cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
+            cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
+             alert('Sorry try again!');
+        }    
     }
     resultDisplay.textContent = cardsWon.length;
     cardsChosen = [];
@@ -74,9 +75,10 @@ function checkMatch(){
     }
 }
 function resp(){
-      gridDisplay.innerHTML=''
-        cardsWon=[]
-        createBoard()
+    gridDisplay.innerHTML=''
+    cardsWon=[]
+    cardArray.sort(()=> 0.5 - Math.random());
+    createBoard()
 }
 function flipCard() {
     
