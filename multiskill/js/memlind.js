@@ -85,7 +85,7 @@ function resp(){
     createBoard()
 }
 function flipCard() {
-    
+    ally.innerHTML="um thinking...what next?"
     console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
@@ -99,9 +99,9 @@ function flipCard() {
     console.log(cardsChosen);
     console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {
-       this.setAttribute('src', cardArray[cardId].img);
+         setTimeout( this.setAttribute('src', cardArray[cardId].img),500);
     }else {if (cardsChosen.length === 2) {
-        checkMatch();
+       setTimeout(  checkMatch(), 500);
      }
     }
 }
