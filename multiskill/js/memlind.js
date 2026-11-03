@@ -87,9 +87,11 @@ function flipCard() {
     console.log('clicked', cardId);
     console.log(cardsChosen);
     console.log(cardsChosenIds);
-    this.setAttribute('src', cardArray[cardId].img);
-    if (cardsChosen.length === 2) {
+     if (cardsChosen.length === 1) {
+       this.setAttribute('src', cardArray[cardId].img);
+    }else {if (cardsChosen.length === 2) {
         checkMatch();
+     }
     }
 }
 
