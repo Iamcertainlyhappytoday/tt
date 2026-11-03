@@ -74,7 +74,8 @@ function checkMatch(){
     cardsChosenIds = [];
     if (cardsWon.length == (cardArray.length/2)){
         //alert or
-        resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?'
+        resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
+        ally.innerHTML='';
       resp()
     }
 }
