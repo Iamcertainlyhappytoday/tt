@@ -68,7 +68,9 @@ function checkMatch(){
     cardsChosenIds = [];
     if (cardsWon.length == (cardArray.length/2)){
         //alert or
-        resultDisplay.innerHTML = ' congratulations, you\'ve found them all'
+        resultDisplay.innerHTML = ' congratulations, you\'ve found them all<br>try again?'
+        gridDisplay.innerHTML=''
+        createBoard()
     }
 }
 function flipCard() {
