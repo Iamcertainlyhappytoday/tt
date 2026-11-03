@@ -55,7 +55,7 @@ function checkMatch(){
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
     }else{
         if (cardsChosen[0] == cardsChosen[1]){
-            all.innerHTML='You found a match!'
+            ally.innerHTML='You found a match!'
             //alert('You found a match!');
             cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
@@ -65,7 +65,7 @@ function checkMatch(){
         }else{
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
-             all.innerHTML='Sorry try again!'
+             ally.innerHTML='Sorry try again!'
             //alert('Sorry try again!');
         }    
     }
