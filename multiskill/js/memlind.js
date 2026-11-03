@@ -89,7 +89,7 @@ function flipCard() {
     console.log(cardsChosenIds);
     this.setAttribute('src', cardArray[cardId].img);
     if (cardsChosen.length === 2) {
-        setTimeout( checkMatch(), 500);
+        checkMatch();
     }
 }
 
