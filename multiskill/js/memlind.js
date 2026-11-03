@@ -17,6 +17,7 @@ cardArray.sort(()=> 0.5 - Math.random());
 //console.log(cardArray);
 const gridDisplay = document.querySelector('#grid');
 const resultDisplay = document.querySelector('#result');
+const ally=document.querySelector('#ally')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
@@ -49,11 +50,13 @@ function checkMatch(){
     
     console.log('check for a match');
     if (optionOneId == optionTwoId) {
-        alert('You have clicked the same image!');
+        ally.innerHTML='You have clicked the same image!'
+        //alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
     }else{
         if (cardsChosen[0] == cardsChosen[1]){
-            alert('You found a match!');
+            all.innerHTML='You found a match!'
+            //alert('You found a match!');
             cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionOneId].removeEventListener('click', flipCard);
@@ -62,7 +65,8 @@ function checkMatch(){
         }else{
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
-             alert('Sorry try again!');
+             all.innerHTML='Sorry try again!'
+            //alert('Sorry try again!');
         }    
     }
     resultDisplay.textContent = cardsWon.length;
