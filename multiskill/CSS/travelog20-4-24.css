@@ -403,3 +403,8 @@ a address [href^="mailto"] ::after { content: "📧"}
           transform: translate(205px, 505px);
       }
   }
+  @media(width<620px) {
+      #grid{
+         min-width: 90%;
+          margin:auto;
+      }
