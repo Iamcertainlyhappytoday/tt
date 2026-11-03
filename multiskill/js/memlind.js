@@ -59,8 +59,8 @@ function checkMatch(){
         cards[optionTwoId].removeEventListener('click', flipCard);
         cardsWon.push(cardsChosen);
     }else{
-        cards[optionOneId].setAttribute('src', 'imgBam/white.PNG');  
-        cards[optionTwoId].setAttribute('src', 'imgBam/white.PNG'); 
+        cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
+        cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
          alert('Sorry try again!');
     }
     resultDisplay.textContent = cardsWon.length;
