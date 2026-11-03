@@ -20,7 +20,7 @@ const resultDisplay = document.querySelector('#result');
 let cardsChosen=[];
 let cardsChosenIds = [];
 const cardsWon=[];
-createBoard();
+
 function createBoard(){
 //to create and element for each item in the array use
 //forEach or a for loop 
@@ -38,7 +38,7 @@ function createBoard(){
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
 };
-
+createBoard();
 
 function checkMatch(){
     const cards = document.querySelectorAll('#grid img');
