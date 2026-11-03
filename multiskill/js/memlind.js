@@ -20,6 +20,7 @@ const resultDisplay = document.querySelector('#result');
 let cardsChosen=[];
 let cardsChosenIds = [];
 const cardsWon=[];
+createBoard();
 function createBoard(){
 //to create and element for each item in the array use
 //forEach or a for loop 
@@ -37,7 +38,7 @@ function createBoard(){
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
 };
-createBoard();
+
 
 function checkMatch(){
     const cards = document.querySelectorAll('#grid img');
@@ -50,7 +51,7 @@ function checkMatch(){
     if (optionOneId == optionTwoId) {
         alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
-    }else
+    }
     if (cardsChosen[0] == cardsChosen[1]){
         alert('You found a match!');
         cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
@@ -69,10 +70,13 @@ function checkMatch(){
     if (cardsWon.length == (cardArray.length/2)){
         //alert or
         resultDisplay.innerHTML = ' congratulations, you\'ve found all 'cardWon.length'+<br>try again?'
-        gridDisplay.innerHTML=''
+      
+    }
+}
+function resp(){
+      gridDisplay.innerHTML=''
         cardsWon=[]
         createBoard()
-    }
 }
 function flipCard() {
     
