@@ -3,7 +3,7 @@ body{ display:flex;   font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Treb
 main{display: flex;justify-content: center;}
 header {width: 100%; display: flex; background-image: url(../img/tentslim.JPG) ; background-size: cover;     
 background-repeat: no-repeat;   font: 12px Arial, Helvetica, sans-serif;  color: royalblue; flex-direction: column;}
-#alerter{display:inline-flex; background-color:rebeccapurple; color: whitesmoke; margin:auto;}
+#alerter{display:inline-flex; background-color:rebeccapurple; color: whitesmoke; margin: 5px auto 0 auto; border: 2px yellow solid; padding: 3px;}
 #ttmenu{background-color: whitesmoke; margin:10px 10px auto auto;border: 1px solid whitesmoke; }
 #ttmenu  text{font-weight: bold; font-size: 2em; background-color: lightgreen; color: rebeccapurple;}
 .sitetitleh {display: flex; flex-direction: column; margin-left: 25px ; margin-bottom: 25px;  font-size: 1.6em;
