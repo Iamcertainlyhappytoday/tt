@@ -17,7 +17,7 @@ cardArray.sort(()=> 0.5 - Math.random());
 //console.log(cardArray);
 const gridDisplay = document.querySelector('#grid');
 const resultDisplay = document.querySelector('#result');
-const ally=document.querySelector('#ally')
+const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
