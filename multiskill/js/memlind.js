@@ -86,8 +86,9 @@ function resp(){
 }
 function flipCard() {
     ally.innerHTML="um thinking...what next?"
-    ally.removeAttribute('style','display:none;')
-    ally.setAttribute('style','display:inline-flex;')
+    if(ally.getAttribute('style','display:none;'){ 
+        all.removeAttribute('style','display:none')
+        ally.setAttribute('style','display:inline-flex;')}
     console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
