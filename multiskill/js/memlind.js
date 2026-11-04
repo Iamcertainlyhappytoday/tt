@@ -83,10 +83,7 @@ function resp(){
     createBoard()
 }
 function flipCard() {
-    ally.innerHTML="um thinking...what next?"
-    if(ally.getAttribute('style','display:none;')==true){ 
-        ally.removeAttribute('style','display:none')
-        ally.setAttribute('style','display:inline-flex;')}
+    ally.innerHTML="um thinking...what next?"    
     console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
