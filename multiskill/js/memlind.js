@@ -44,11 +44,8 @@ createBoard();
 function checkMatch(){
     const cards = document.querySelectorAll('#grid img');
     const optionOneId = cardsChosenIds[0];
-    const optionTwoId = cardsChosenIds[1];
-
-    console.log()
-    
-    console.log('check for a match');
+    const optionTwoId = cardsChosenIds[1];    
+    //console.log('check for a match');
     if (optionOneId == optionTwoId) {
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
@@ -61,7 +58,7 @@ function checkMatch(){
             cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
-            cardsWon.push(cardsChosen);
+            cardsWon.push(cardsChosen[1]);
         }else{
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
@@ -106,7 +103,7 @@ function flipCard() {
      if (cardsChosen.length === 1) {
          setTimeout( this.setAttribute('src', cardArray[cardId].img),500);
     }else {if (cardsChosen.length === 2) {
-       setTimeout(  checkMatch(), 500);
+        checkMatch()
      }
     }
 }
