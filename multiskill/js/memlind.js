@@ -50,7 +50,7 @@ function checkMatch(){
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
-    }else{
+    }else
         if (cardsChosen[0] == cardsChosen[1]){
             ally.innerHTML='You found a match!'          
             //alert('You found a match!');
@@ -65,7 +65,7 @@ function checkMatch(){
             ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');
         }    
-    }
+    
     resultDisplay.textContent = cardsWon.length;
     cardsChosen = [];
     cardsChosenIds = [];
