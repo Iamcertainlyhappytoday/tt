@@ -15,7 +15,7 @@ const cardArr = [
 
 
 //console.log(cardArray);
-const gridDisplay = document.querySelector('#grid');
+
 const resultDisplay = document.querySelector('#result');
 const ally=document.querySelector('#alerter')
 let cardsChosen=[];
@@ -23,6 +23,7 @@ let cardsChosenIds = [];
 let cardsWon=[];
 let cardArray;
  function createBoard(){
+     const gridDisplay = document.querySelector('#grid');
 //to create and element for each item in the array use
 //forEach or a for loop    
  cardArray=cardArr.sort(()=> 0.5 - Math.random());
@@ -81,7 +82,7 @@ function checkMatch(){
     }
 }
 function resp(){
-    gridDisplay.innerHTML=''
+    document.querySelector('#grid').innerHTML=''
     cardsWon.splice(0, cardsWon.length); // or cardsWon.length=0
     //cardArray.sort(()=> 0.5 - Math.random());
     createBoard()
