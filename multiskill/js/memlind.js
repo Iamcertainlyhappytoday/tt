@@ -65,8 +65,8 @@ function checkMatch(){
             //alert('Sorry try again!');}
     }        
     resultDisplay.textContent = cardsWon.length;
-    cardsChosen.splice(0, arr.length);  //or cardsChosen.lenght=0
-    cardsChosenIds.splice(0, arr.length);
+    cardsChosen.splice(0, cardsChosen.length);  //or cardsChosen.lenght=0
+    cardsChosenIds.splice(0, cardsChosenIds.length);
     if (cardsWon.length == (cardArray.length/2)){
         //alert or
         resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
@@ -76,7 +76,7 @@ function checkMatch(){
 }
 function resp(){
     gridDisplay.innerHTML=''
-    cardsWon.splice(0, arr.length); // or cardsWon.length=0
+    cardsWon.splice(0, cardsWon.length); // or cardsWon.length=0
     cardArray.sort(()=> 0.5 - Math.random());
     createBoard()
 }
