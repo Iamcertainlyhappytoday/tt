@@ -80,11 +80,12 @@ function resp(){
     //cardArray.sort(()=> 0.5 - Math.random());
     createBoard()
 }
-function flipCard() {
+async function flipCard() {
     ally.innerHTML="um thinking...what next?"    
-    console.log(cardArray);
+   // console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
+    try{
     const cardId = this.getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
@@ -95,10 +96,13 @@ function flipCard() {
     //console.log(cardsChosen);
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {
-         setTimeout( this.setAttribute('src', cardArray[cardId].img),500);
+         await setTimeout( this.setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
+    }
+    }catch(e){
+        console.error('error message:', e.message
     }
 }
 
