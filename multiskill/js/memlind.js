@@ -89,13 +89,13 @@ function resp(){
     //cardArray.sort(()=> 0.5 - Math.random());
     createBoard()
 }
-async function flipCard() {
+ function flipCard() {
     ally.innerHTML="um thinking...what next?"    
    // console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
-    try{
-    const cardId = await this.getAttribute('dataid');
+
+    const cardId =  this.getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
@@ -111,9 +111,7 @@ async function flipCard() {
         checkMatch()
      }
     }
-    }catch(e){
-        console.error('error message:', e.message)
-    }
+   
 }
 
   
