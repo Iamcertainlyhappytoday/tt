@@ -26,7 +26,7 @@ async function createBoard(){
 //to create and element for each item in the array use
 //forEach or a for loop 
     try{
-await cardArray=cardArr.sort(()=> 0.5 - Math.random());
+ cardArray=cardArr.sort(()=> 0.5 - Math.random());
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
