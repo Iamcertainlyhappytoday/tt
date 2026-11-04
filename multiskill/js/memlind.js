@@ -50,8 +50,9 @@ function checkMatch(){
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
-    }else
-        if (cardsChosen[0] == cardsChosen[1]){
+        return;
+    }
+    if (cardsChosen[0] == cardsChosen[1]){
             ally.innerHTML='You found a match!'          
             //alert('You found a match!');
             cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
@@ -59,13 +60,12 @@ function checkMatch(){
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen[1]);
-        }else{
+    }else{
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
             ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');
-        }    
-    
+    }        
     resultDisplay.textContent = cardsWon.length;
     cardsChosen = [];
     cardsChosenIds = [];
