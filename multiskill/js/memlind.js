@@ -96,9 +96,9 @@ function flipCard() {
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
     //put it into a new array by push.
     cardsChosenIds.push(cardId);
-    console.log('clicked', cardId);
-    console.log(cardsChosen);
-    console.log(cardsChosenIds);
+    //console.log('clicked', cardId);
+    //console.log(cardsChosen);
+    //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {
          setTimeout( this.setAttribute('src', cardArray[cardId].img),500);
     }else {if (cardsChosen.length === 2) {
