@@ -22,10 +22,9 @@ let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
 let cardArray;
-async function createBoard(){
+ function createBoard(){
 //to create and element for each item in the array use
-//forEach or a for loop 
-    try{
+//forEach or a for loop    
  cardArray=cardArr.sort(()=> 0.5 - Math.random());
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
@@ -39,9 +38,7 @@ async function createBoard(){
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
-    }catch(e){
-        console.error('error message: ',e.message)
-    }
+  
 };
 createBoard();
 
