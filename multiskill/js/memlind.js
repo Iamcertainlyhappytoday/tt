@@ -102,7 +102,7 @@ async function flipCard() {
      }
     }
     }catch(e){
-        console.error('error message:', e.message
+        console.error('error message:', e.message)
     }
 }
 
