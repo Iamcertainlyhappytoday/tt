@@ -105,7 +105,7 @@ async function flipCard() {
     //console.log(cardsChosen);
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {            
-          this.removeAttribute('src');
+         // this.removeAttribute('src');
        this.src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
