@@ -50,14 +50,12 @@ function checkMatch(){
     
     console.log('check for a match');
     if (optionOneId == optionTwoId) {
-        ally.innerHTML='You have clicked the same image!'
-        ally.setAttribute(display:inline-flex;)
+        ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
        cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
     }else{
         if (cardsChosen[0] == cardsChosen[1]){
-            ally.innerHTML='You found a match!'
-            ally.setAttribute(display:inline-flex;)
+            ally.innerHTML='You found a match!'          
             //alert('You found a match!');
             cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
@@ -67,8 +65,7 @@ function checkMatch(){
         }else{
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
-            ally.innerHTML='Sorry try again!'
-            ally.setAttribute(display:inline-flex;)
+            ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');
         }    
     }
@@ -79,7 +76,8 @@ function checkMatch(){
         //alert or
         resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
         ally.innerHTML='';
-        ally.removeAttribute(display:inline-flex;)
+        ally.removeAttribute('style','display:inline-flex;')
+        ally.setAttribute('style','display:none;')
       resp()
     }
 }
@@ -91,7 +89,8 @@ function resp(){
 }
 function flipCard() {
     ally.innerHTML="um thinking...what next?"
-    ally.setAttribute(display:inline-flex;)
+    ally.removeAttribute('style','display:none;')
+    ally.setAttribute('style','display:inline-flex;')
     console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
