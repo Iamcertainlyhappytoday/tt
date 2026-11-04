@@ -412,7 +412,7 @@ alpha.innerHTML+= newOrder[i] + ', ' ;
 let yourphoto=document.querySelector('#changephoto button');
 yourphoto.addEventListener('click', changephoto);
 function changephoto(){    
-    let titlephoto=[ {img: 'mainimg/personalme.JPG', alt: 'personaltrainer-me'},
+    let titlephoto=[ {img: 'mainimg/personalme.jpg', alt: 'personaltrainer-me'},
         {img: 'mainimg/climbme.JPG', alt: 'climbme'},
         {img: 'mainimg/samm.JPG', alt: 'raceme'}
     ];     
