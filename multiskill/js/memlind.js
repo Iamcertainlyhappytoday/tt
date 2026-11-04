@@ -13,7 +13,7 @@ const cardArray = [
     {  name: 'a6',  img: '  imgBam/a6.JPG', }
     ];
 
-cardArray.sort(()=> 0.5 - Math.random());
+
 //console.log(cardArray);
 const gridDisplay = document.querySelector('#grid');
 const resultDisplay = document.querySelector('#result');
@@ -25,7 +25,7 @@ let cardsWon=[];
 function createBoard(){
 //to create and element for each item in the array use
 //forEach or a for loop 
-
+cardArray.sort(()=> 0.5 - Math.random());
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
@@ -77,7 +77,7 @@ function checkMatch(){
 function resp(){
     gridDisplay.innerHTML=''
     cardsWon.splice(0, cardsWon.length); // or cardsWon.length=0
-    cardArray.sort(()=> 0.5 - Math.random());
+    //cardArray.sort(()=> 0.5 - Math.random());
     createBoard()
 }
 function flipCard() {
