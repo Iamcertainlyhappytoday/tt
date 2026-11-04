@@ -49,7 +49,7 @@ function checkMatch(){
     if (optionOneId == optionTwoId) {
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
-       cards[optionOneId].setAttribute('src', 'imgBam/orange.PNG')
+       cards[optionOneId].setAttribute('src', 'imgBam/white.png')
     }else if (cardsChosen[0] == cardsChosen[1]){
             ally.innerHTML='You found a match!'          
             //alert('You found a match!');
