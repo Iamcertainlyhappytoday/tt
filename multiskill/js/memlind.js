@@ -1,4 +1,4 @@
-const cardArray = [
+const cardArr = [
     {  name: 'a1',  img: ' imgBam/a1.JPG',   },
     {  name: 'a2',  img: ' imgBam/a2.JPG', },
     {  name: 'a3',  img: '  imgBam/a3.JPG',   },
@@ -21,11 +21,12 @@ const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
-
-function createBoard(){
+let cardArray;
+async function createBoard(){
 //to create and element for each item in the array use
 //forEach or a for loop 
-cardArray.sort(()=> 0.5 - Math.random());
+    try{
+await cardArray=cardArr.sort(()=> 0.5 - Math.random());
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
@@ -38,6 +39,9 @@ cardArray.sort(()=> 0.5 - Math.random());
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
+    }catch(e){
+        console.error('error message: ',e.message)
+    }
 };
 createBoard();
 
