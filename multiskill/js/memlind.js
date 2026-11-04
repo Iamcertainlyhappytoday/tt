@@ -49,17 +49,22 @@ function checkMatch(){
     if (optionOneId == optionTwoId) {
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
+       cards[optionOneId].removeAttribute('src')
        cards[optionOneId].setAttribute('src', 'imgBam/white.png')
     }else if (cardsChosen[0] == cardsChosen[1]){
             ally.innerHTML='You found a match!'          
             //alert('You found a match!');
+            cards[optionOneId].removeAttribute('src');
             cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
+            cards[optionTwoId].removeAttribute('src');
             cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen[1]);
     }else{
+            cards[optionOneId].removeAttribute('src');  
             cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
+            cards[optionTwoId].removeAttribute('src');
             cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
             ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');}
@@ -95,9 +100,8 @@ async function flipCard() {
     //console.log('clicked', cardId);
     //console.log(cardsChosen);
     //console.log(cardsChosenIds);
-     if (cardsChosen.length === 1) {
-            
-          this.removeAttribute('src','imgBam/orange.PNG')||this.removeAttribute('src','imgBam/white.png');
+     if (cardsChosen.length === 1) {            
+          this.removeAttribute('src');
       await setTimeout( this.setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
