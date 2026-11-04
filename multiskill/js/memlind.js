@@ -21,7 +21,7 @@ const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
-let cardArray;
+let cardArray=[];
  function createBoard(){
      const gridDisplay = document.querySelector('#grid');
 //to create and element for each item in the array use
