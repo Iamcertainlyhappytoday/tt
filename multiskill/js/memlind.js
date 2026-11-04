@@ -95,7 +95,7 @@ async function flipCard() {
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
     try{
-    const cardId = this.getAttribute('dataid');
+    const cardId = await this.getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
