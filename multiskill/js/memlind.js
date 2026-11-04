@@ -30,7 +30,7 @@ async function createBoard(){
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
-        card.setAttribute('src', 'imgBam/orange.PNG' );
+        card.src='imgBam/orange.PNG'  //setAttribute('src', 'imgBam/orange.PNG' );
         card.style='display:flex; width:221px; height:127px;';       
         card.setAttribute('dataid', i); 
 //this gives a unique data id for each img, print i number beside
@@ -53,23 +53,23 @@ function checkMatch(){
     if (optionOneId == optionTwoId) {
         ally.innerHTML='You have clicked the same image!'        
         //alert('You have clicked the same image!');
-       cards[optionOneId].removeAttribute('src')
-       cards[optionOneId].setAttribute('src', 'imgBam/white.png')
+      // cards[optionOneId].removeAttribute('src')
+       cards[optionOneId].src='imgBam/white.png' //setAttribute('src', 'imgBam/white.png')
     }else if (cardsChosen[0] == cardsChosen[1]){
             ally.innerHTML='You found a match!'          
             //alert('You found a match!');
-            cards[optionOneId].removeAttribute('src');
-            cards[optionOneId].setAttribute('src', 'imgBam/blank.PNG');
-            cards[optionTwoId].removeAttribute('src');
-            cards[optionTwoId].setAttribute('src', 'imgBam/blank.PNG');
+            //cards[optionOneId].removeAttribute('src');
+            cards[optionOneId].src='imgBam/blank.PNG' //setAttribute('src', 'imgBam/blank.PNG');
+            //cards[optionTwoId].removeAttribute('src');
+            cards[optionTwoId].src='imgBam/blank.PNG'  //setAttribute('src', 'imgBam/blank.PNG');
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen[1]);
     }else{
-            cards[optionOneId].removeAttribute('src');  
-            cards[optionOneId].setAttribute('src', 'imgBam/white.png');  
-            cards[optionTwoId].removeAttribute('src');
-            cards[optionTwoId].setAttribute('src', 'imgBam/white.png'); 
+            //cards[optionOneId].removeAttribute('src');  
+            cards[optionOneId].src='imgBam/white.png'  //setAttribute('src', 'imgBam/white.png');  
+            //cards[optionTwoId].removeAttribute('src');
+            cards[optionTwoId].src='imgBam/white.png'  //setAttribute('src', 'imgBam/white.png'); 
             ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');}
     }        
@@ -106,7 +106,7 @@ async function flipCard() {
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {            
           this.removeAttribute('src');
-      await setTimeout( this.setAttribute('src', cardArray[cardId].img),50);
+      setTimeout( this.src=cardArray[cardId].img  //setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
