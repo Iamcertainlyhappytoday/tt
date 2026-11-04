@@ -86,7 +86,7 @@ function resp(){
 }
 function flipCard() {
     ally.innerHTML="um thinking...what next?"
-    if(ally.getAttribute('style','display:none;'){ 
+    if(ally.getAttribute('style','display:none;')){ 
         all.removeAttribute('style','display:none')
         ally.setAttribute('style','display:inline-flex;')}
     console.log(cardArray);
