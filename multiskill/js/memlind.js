@@ -92,8 +92,8 @@ function resp(){
    // console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
-
-    const cardId =  e.target.id  //getAttribute('dataid');
+    let tartet=e.target;
+    const cardId =  target.id  //getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
@@ -104,7 +104,7 @@ function resp(){
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {            
          // this.removeAttribute('src');
-       e.target.src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
+       target.src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
