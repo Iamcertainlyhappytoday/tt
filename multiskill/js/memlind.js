@@ -26,10 +26,10 @@ let cardArray=[];
      const gridDisplay = document.querySelector('#grid');
 //to create and element for each item in the array use
 //forEach or a for loop    
- cardArray=cardArr.sort(()=> 0.5 - Math.random());
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
+        card.src=cardArray[i].img
         card.src='imgBam/orange.PNG'  //setAttribute('src', 'imgBam/orange.PNG' );
         card.style='display:flex; width:221px; height:127px;';       
         card.setAttribute('dataid', i); 
@@ -39,6 +39,7 @@ let cardArray=[];
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
+      cardArray=cardArr.sort(()=> 0.5 - Math.random());
   
 };
 createBoard();
