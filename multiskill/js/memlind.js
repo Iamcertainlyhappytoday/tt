@@ -38,7 +38,7 @@ function createBoard(){
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }    
-      cardArray=cardArr.sort(()=> 0.5 - Math.random());
+      cardArray.sort(()=> 0.5 - Math.random());
   
 };
 createBoard();
