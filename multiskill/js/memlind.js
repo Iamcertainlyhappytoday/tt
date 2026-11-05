@@ -32,7 +32,7 @@ let cardArray=[];
         card.src=cardArray[i].img
         card.src='imgBam/orange.PNG'  //setAttribute('src', 'imgBam/orange.PNG' );
         card.style='display:flex; width:221px; height:127px;';       
-        card.setAttribute('dataid', i); 
+        card.id=i //setAttribute('dataid', i); 
 //this gives a unique data id for each img, print i number beside
 //NEXT TO PUT IT INTO THE GRID, ie between the <div> tags
 //So get the grid display..
@@ -94,7 +94,7 @@ function resp(){
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
 
-    const cardId =  this.getAttribute('dataid');
+    const cardId =  this.id  //getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
