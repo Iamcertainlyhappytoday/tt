@@ -28,7 +28,7 @@ function createBoard(){
     for(let i= 0 ; i<cardArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
-        card.src=cardArray[i].img
+       // card.src=cardArray[i].img there is still a block so this does not really load helpfully
         card.src='imgBam/orange.PNG'  //setAttribute('src', 'imgBam/orange.PNG' );
         card.style='display:flex; width:221px; height:127px;';       
         card.id=i //setAttribute('dataid', i); 
