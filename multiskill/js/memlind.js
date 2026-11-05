@@ -92,7 +92,7 @@ function resp(){
    // console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
-    let tartet=e.target;
+    let target=e.target;
     const cardId =  target.id  //getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
