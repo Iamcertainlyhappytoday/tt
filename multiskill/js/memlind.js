@@ -92,9 +92,9 @@ function resp(){
    // console.log(cardArray);
     //think of which card I flipped on. 
     //need a listener on each card, get the dataid
-    let targett=e.target;
+    let targett=e.target;// target is readonly
      
-    const cardId =  e.target.id  //getAttribute('dataid');
+    const cardId =  targett.id  //getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
