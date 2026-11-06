@@ -31,7 +31,7 @@ function createBoard(){
        // card.src=cardArray[i].img there is still a block so this does not really load helpfully
         card.src='imgBam/orange.PNG'  //setAttribute('src', 'imgBam/orange.PNG' );
         card.src.style="display:flex; width:100%; height:100%;"
-        card.style='flex: 0 2 221px ;max-width:32%;max-height:127px';       
+        card.style='max-width:32%;max-height:127px';       
         card.id=i //setAttribute('dataid', i); 
 //this gives a unique data id for each img, print i number beside
 //NEXT TO PUT IT INTO THE GRID, ie between the <div> tags
