@@ -39,7 +39,7 @@ margin:-25px auto auto auto;padding: 0; }
 #section18 text{font-size: larger; color: darkblue ;margin-top: 4px;
     font-weight: bolder;font-family: Georgia, 'Times New Roman', Times, serif; }  
 #grid{display:flex ;flex-wrap: wrap;flex-direction: row;
-        flex: 0 1 667px; margin:auto; max-width: 667px;max-height: 400px;}
+        margin:auto; max-width: 667px;max-height: 390px;}
 .hangnav {width:100%;  display: flex;  flex-direction:row; flex-wrap:wrap ; justify-content: center; }
 .hangnav li{display:flex;   }
  .navtitletwo{width:100%} 
