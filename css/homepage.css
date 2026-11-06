@@ -1,5 +1,5 @@
 body{ display:flex;   font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-        font-size: 13px;flex-direction: column;margin: 0;padding: 0; width: 100vw; height:100vh;}         
+        font-size: 13px;flex-direction: column;margin: 0;padding: 0; width: 100vw; height:100vh;}        
     main{display: flex;justify-content: center;}
     header {width: 100%; display: flex; background-image: url(../multiskill/img/tentslim.JPG) ; background-size: cover;     
     background-repeat: no-repeat;   font: 12px Arial, Helvetica, sans-serif;  color: royalblue; flex-direction: column;}
@@ -106,7 +106,7 @@ header    .current a  {    color: darkmagenta; font-weight: bold; } */
 .fr{display: flex;flex-direction: row;}
 .fra{display: flex; flex-direction: row; margin:0 auto;}
 .fr100{display: flex; flex-direction: row; width: 100%;justify-content: space-between;flex-wrap: wrap;}
-
+.fr1,.fr2,.fr3(display:flex; flex-direction:column)
 .fc{display: flex; flex-direction: column;}
 .fca{display: flex; flex-direction: column; margin:0 auto;}
 .yellowtoo{margin: auto; margin-bottom:20px; display: inline-flex; background: plum;
