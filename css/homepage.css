@@ -1,6 +1,7 @@
 body{ display:flex;   font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
         font-size: 13px;flex-direction: column;margin: 0;padding: 0; width: 100vw; height:100vh;}        
     main{display: flex;justify-content: center;}
+.fr1{display:flex;max-width:350px;}
     header {width: 100%; display: flex; background-image: url(../multiskill/img/tentslim.JPG) ; background-size: cover;     
     background-repeat: no-repeat;   font: 12px Arial, Helvetica, sans-serif;  color: royalblue; flex-direction: column;}
     #ttmenu{background-color: whitesmoke; margin:10px 10px auto auto;border: 1px solid whitesmoke; }
