@@ -259,7 +259,7 @@ border-radius: 6px; border-color:whitesmoke; }
 .oldBut {background-color: springgreen; color: grey;opacity: 1;border-color: brown;} 
 a address [href^="mailto"] ::after { content: "📧"}
 .containerfoot { width:100%; flex-direction: row; color: whitesmoke;   justify-content: center; display: flex; 
-        background-color:darkblue ;flex-wrap:wrap;}
+        background-color:darkblue ;flex-wrap:wrap;  margin-top:auto;}
 .headline {color: springgreen;font-size:larger;margin: 5px;} 
 .postsabout { background-color: yellow; color: teal;margin: 5px;}
 .mail    { background-color:springgreen ;color:darkmagenta ; margin: 5px;   }    
