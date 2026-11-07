@@ -13,7 +13,7 @@ const cardArray = [
     {  name: 'a6',  img: '  imgBam/a6.JPG', }
     ];
 
-
+let underArray=[]
 //console.log(cardArray);
 
 const resultDisplay = document.querySelector('#result');
@@ -24,10 +24,11 @@ let cardsWon=[];
 async  function createBoard(){
     try{
     await cardArray.sort(()=> 0.5 - Math.random());
+        underArray=cardArray;
      const gridDisplay = document.querySelector('#grid');
 //to create and element for each item in the array use
 //forEach or a for loop    
-    for(let i= 0 ; i<cardArray.length; i++){
+    for(let i= 0 ; i<underArray.length; i++){
         const card= document.createElement('img');
 //this creates an img tag i number of times
        // card.src=cardArray[i].img there is still a block so this does not really load helpfully
@@ -100,7 +101,7 @@ function resp(){
     const cardId =  targett.id  //getAttribute('dataid');
     //this does this to the flipCard. this keyword interracts with whatever
     //element is clicked.    
-    cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
+    cardsChosen.push(underArray[cardId].name) ;  //gets the name of the random array where clicked
     //put it into a new array by push.
     cardsChosenIds.push(cardId);
     //console.log('clicked', cardId);
@@ -108,7 +109,7 @@ function resp(){
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {            
          // this.removeAttribute('src');
-   e.target.src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
+   e.target.src=underArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
