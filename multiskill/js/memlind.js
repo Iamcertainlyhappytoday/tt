@@ -40,7 +40,7 @@ async  function createBoard(){
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
     }   
-    }catch(e){console.log('error:' e.message
+    }catch(e){console.log('error:' e.message)
              }
     
 };
