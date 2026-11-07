@@ -108,7 +108,7 @@ function resp(){
     //console.log(cardsChosenIds);
      if (cardsChosen.length === 1) {            
          // this.removeAttribute('src');
-    cardArray[cardId].src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
+   e.target.src=cardArray[cardId].img;  //setAttribute('src', cardArray[cardId].img),50);
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
