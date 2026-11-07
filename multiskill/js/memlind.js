@@ -21,7 +21,9 @@ const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
-function createBoard(){
+async  function createBoard(){
+    try{
+    await cardArray.sort(()=> 0.5 - Math.random());
      const gridDisplay = document.querySelector('#grid');
 //to create and element for each item in the array use
 //forEach or a for loop    
@@ -37,9 +39,10 @@ function createBoard(){
 //So get the grid display..
         card.addEventListener('click', flipCard);
         gridDisplay.appendChild(card)//no '' because is a variable!!
-    }    
-      cardArray.sort(()=> 0.5 - Math.random());
-  
+    }   
+    }catch(e){console.log('error:' e.message
+             }
+    
 };
 createBoard();
 
