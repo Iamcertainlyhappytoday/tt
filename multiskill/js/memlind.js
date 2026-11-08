@@ -48,7 +48,7 @@ async  function createBoard(){
 createBoard();
 
 function checkMatch(){
-    const cards = document.querySelectorAll('#grid');
+    const cards = document.querySelectorAll('#grid img');
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1];    
     //console.log('check for a match');
