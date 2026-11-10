@@ -298,7 +298,9 @@ button
    
 }
 
-
+@media(width<600px){
+   .sitetitleh{font-size:1.3em;}
+}
 
 
     
