@@ -24,7 +24,7 @@ let cardId;
  function createBoard(){
   oldgrid=document.querySelector('#grid').innerHTML; 
   cardArray.sort(()=> 0.5 - Math.random());
-    let card=document.querySelectorAll('.cardsize ')
+    let card=document.querySelectorAll('#gird .cardsize img')
         for(let i= 0 ; i<card.length; i++){ 
             card[i].addEventListener('click', flipCard);
             console.log(cardArray[i])
