@@ -24,7 +24,7 @@ let cardId;
  function createBoard(){
   oldgrid=document.querySelector('#grid').innerHTML; 
   cardArray.sort(()=> 0.5 - Math.random());
-    let card=document.querySelectorAll('#gird img ')
+    let card=document.querySelectorAll('#grid .cardsize img ')
         for(let i= 0 ; i<card.length; i++){ 
             card[i].addEventListener('click', flipCard);
             console.log(cardArray[i])
@@ -33,7 +33,7 @@ let cardId;
 createBoard();
 
  function checkMatch(){
-    const cards = document.querySelectorAll('#grid .cardsize  img');
+    const cards = document.querySelectorAll('#grid  img');
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1];     
     if (optionOneId === optionTwoId) {
