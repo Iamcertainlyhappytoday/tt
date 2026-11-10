@@ -31,7 +31,7 @@ let cardId;
     }   
 };
 createBoard();
- function checkMatch(){
+async function checkMatch(){
  
   
     const cards = document.querySelectorAll('#grid .cardsize  img');
@@ -79,7 +79,7 @@ function resp(){
     
     createBoard()
 }
- function flipCard(e) {
+async function flipCard(e) {
 
     ally.innerHTML="um thinking...what next?"   
    let target= e.target
