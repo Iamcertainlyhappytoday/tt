@@ -96,10 +96,7 @@ function flipCard(e) {
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
-    }}catch(e){console.log(e)
-
-    }
-  
+    }  
 }
 
   
