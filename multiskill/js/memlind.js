@@ -69,7 +69,7 @@ createBoard();
    
 
 function resp(){
-    document.querySelector('#grid').innerHTML=gridDisplay
+    document.querySelector('#grid').innerHTML=gridDisplay.innerHTML;
     cardsWon=[]    
     createBoard()
 }
