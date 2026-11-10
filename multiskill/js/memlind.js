@@ -12,7 +12,7 @@ const cardArray = [
     {  name: 'a5',  img: '  imgBam/a5.JPG', },
     {  name: 'a6',  img: '  imgBam/a6.JPG', }
     ];
-
+const oldgrid=document.querySelector('#grid').innerHTML;
  //cardArray=cardArr.sort(()=> 0.5 - Math.random());
 const resultDisplay = document.querySelector('#result');
 const ally=document.querySelector('#alerter')
@@ -67,7 +67,7 @@ createBoard();
    
 }
 function resp(){
-    gridDisplay.innerHTML=''
+    gridDisplay.innerHTML=oldgrid;
     cardsWon=[]
     
     createBoard()
