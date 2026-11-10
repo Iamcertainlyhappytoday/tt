@@ -38,8 +38,13 @@ margin:-25px auto auto auto;padding: 0; }
 .ulColl {display: flex;flex-direction: column;align-items: flex-start;opacity: 0.9;} 
 #section18 text{font-size: larger; color: darkblue ;margin-top: 4px;
     font-weight: bolder;font-family: Georgia, 'Times New Roman', Times, serif; }  
-#grid{display:flex ;flex-wrap: wrap;flex-direction: row;
-        margin:auto; max-width: 667px;max-height: 520px;}
+/*#grid{display:flex ;flex-wrap: wrap;flex-direction: row;
+        margin:auto; max-width: 667px;max-height: 520px;}*/
+#grid{display:flex;flex-wrap: wrap;flex-direction: row;max-width:667px;
+        flex: 0 1 667px; margin:auto;max-height: 512px;}
+/*.cardsize{flex:0 2 221px; max-width: 32%;max-height: 127px; }*/
+.cardsize{ display:flex; max-width:32%;max-height:127px;}
+#grid img{display:flex;width:100%;height:100%;}
 .hangnav {width:100%;  display: flex;  flex-direction:row; flex-wrap:wrap ; justify-content: center; }
 .hangnav li{display:flex;   }
  .navtitletwo{width:100%} 
