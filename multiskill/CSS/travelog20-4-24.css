@@ -263,7 +263,7 @@ border-radius: 6px; border-color:whitesmoke; }
 /*.buttonabout:hover { opacity: 0.8;}*/
 .oldBut {background-color: springgreen; color: grey;opacity: 1;border-color: brown;} 
 a address [href^="mailto"] ::after { content: "📧"}
-.containerfoot { flex:0 1 100%; color: whitesmoke;   justify-content: center;  
+.containerfoot { flex:0 1 100%; color: whitesmoke;   justify-items: center;  
         background-color:darkblue ;flex-wrap:wrap;  margin-top:auto;}
 .headline {color: springgreen;font-size:larger;margin: 5px;} 
 .postsabout { background-color: yellow; color: teal;margin: 5px;}
