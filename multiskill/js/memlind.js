@@ -110,7 +110,7 @@ function flipCard(e) {
             if (optionOneId === optionTwoId) {
                 ally.innerHTML='You have clicked the same image!';    
             target.src='imgBam/white.png';   
-            target.style="max-width:221px; max-height:127px; display:flex"'   
+            target.style="max-width:221px; max-height:127px; display:flex" 
             }else{
                 if (cardsChosen[0][1] ===cardsChosen[1][1]){
                     ally.innerHTML='You found a match!'          
