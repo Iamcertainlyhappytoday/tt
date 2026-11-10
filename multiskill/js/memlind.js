@@ -86,7 +86,7 @@ function flipCard(e) {
     cardsChosenIds.push(cardId);
      if (cardsChosen.length === 1) {        
      // e.target.src= cardArray[cardId].img       ; 
-         document.querySelectorAll('#grid .cardsize')[cardId].src=cardArray[cardId].img  
+         document.querySelectorAll('#grid .cardsize img')[cardId].src=cardArray[cardId].img  
     }else {if (cardsChosen.length === 2) {
         checkMatch()
      }
