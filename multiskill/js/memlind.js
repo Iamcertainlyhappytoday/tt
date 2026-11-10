@@ -76,6 +76,7 @@ function resp(){
 function flipCard(e) {    
     ally.innerHTML="um thinking...what next?"   
    let target= e.target
+    const first =target.src
    let targett=target.parentElement  
     console.log(targett)//show the parent is not clicked
     let cardId =targett.getAttribute('dataid');
@@ -86,7 +87,7 @@ function flipCard(e) {
     cardsChosenIds.push(cardId);
      if (cardsChosen.length === 1) {        
      // e.target.src= cardArray[cardId].img       ;
-         const first=target.src=cardArray[cardId].img  ;
+       target.src=cardArray[cardId].img  ;
     }else {if (cardsChosen.length === 2) {
           const cards = document.querySelectorAll('#grid .cardsize  img');    
             const optionOneId = cardsChosenIds[0];
