@@ -31,19 +31,15 @@ let cardId;
     }   
 };
 createBoard();
-function checkMatch(){
- 
-  
-    const cards = document.querySelectorAll('#grid .cardsize  img');
-    
+function checkMatch(){ 
+    const cards = document.querySelectorAll('#grid .cardsize  img');   
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1]; 
     optionOneId;
     optionTwoId;    
     if (optionOneId === optionTwoId) {
         ally.innerHTML='You have clicked the same image!';    
-       cards[optionOneId].src='imgBam/white.png';
-      
+       cards[optionOneId].src='imgBam/white.png';      
     }else{
         if (cardsChosen[0][1] ===cardsChosen[1][1]){
             ally.innerHTML='You found a match!'          
@@ -51,8 +47,7 @@ function checkMatch(){
             cards[optionTwoId].src='imgBam/blank.PNG';    
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
-            cardsWon.push(cardsChosen[1]);
-          
+            cardsWon.push(cardsChosen[1]);          
         }else{           
             cards[optionOneId].src='imgBam/white.png';            
             cards[optionTwoId].src='imgBam/white.png';           
@@ -70,17 +65,16 @@ function checkMatch(){
         resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
         ally.innerHTML='';       
       resp()
-    }
-   
+    }  
 }
+
 function resp(){
     document.querySelector('#grid').innerHTML=gridDisplay
-    cardsWon=[]
-    
+    cardsWon=[]    
     createBoard()
 }
-function flipCard(e) {
 
+function flipCard(e) {
     ally.innerHTML="um thinking...what next?"   
    let target= e.target
    let targett=target.parentElement  
