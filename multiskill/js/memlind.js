@@ -31,15 +31,15 @@ let cardId;
     }   
 };
 createBoard();
-async function checkMatch(){
+function checkMatch(){
  
   
     const cards = document.querySelectorAll('#grid .cardsize  img');
     
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1]; 
-    await optionOneId;
-    await optionTwoId;    
+    optionOneId;
+    optionTwoId;    
     if (optionOneId === optionTwoId) {
         ally.innerHTML='You have clicked the same image!';    
        cards[optionOneId].src='imgBam/white.png';
@@ -79,14 +79,14 @@ function resp(){
     
     createBoard()
 }
-async function flipCard(e) {
+function flipCard(e) {
 
     ally.innerHTML="um thinking...what next?"   
    let target= e.target
    let targett=target.parentElement  
     console.log(targett)//show the parent is not clicked
     let cardId =targett.getAttribute('dataid');
-    await cardId;
+    cardId;
     console.log(cardId)     
     cardsChosen.push(cardArray[cardId].name) ;  //gets the name of the random array where clicked
     //put it into a new array by push.
