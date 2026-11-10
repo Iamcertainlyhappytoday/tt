@@ -12,7 +12,9 @@ const cardArray = [
     {  name: 'a5',  img: '  imgBam/a5.JPG', },
     {  name: 'a6',  img: '  imgBam/a6.JPG', }
     ];
-let gridDisplay=document.querySelector('#grid');
+let gridDisplaya;
+let gridDisplay = document.querySelector('#grid');
+gridDisplaya = gridDisplay;
  //cardArray=cardArr.sort(()=> 0.5 - Math.random());
 const resultDisplay = document.querySelector('#result');
 const ally=document.querySelector('#alerter')
@@ -74,7 +76,7 @@ createBoard();
    
 
 function resp(){
-    document.querySelector('#grid').innerHTML=gridDisplay.innerHTML;
+    document.querySelector('#grid').innerHTML=gridDisplaya.innerHTML;
     cardsWon=[]    
     createBoard()
 }
