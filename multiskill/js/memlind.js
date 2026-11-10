@@ -19,7 +19,7 @@ function gridDisplaya(){
     for(let i=0; i<grinner.length; i++){
         grinner[i].src="imgBam/orange.PNG"
         grinner[i].alt="default image"
-        grinner[i].style="width:221px; height:127px;"
+        grinner[i].style="max-width:221px; max-height:127px; display:flex"
     }
 }
  //cardArray=cardArr.sort(()=> 0.5 - Math.random());
@@ -49,22 +49,22 @@ createBoard();
     if (optionOneId === optionTwoId) {
         ally.innerHTML='You have clicked the same image!';    
        cards[optionOneId].src='imgBam/white.png';     
-        cards[optionOneId].style='height:127px; width:221px';
+        cards[optionOneId].style="max-width:221px; max-height:127px; display:flex"
     }else{
         if (cardsChosen[0][1] ===cardsChosen[1][1]){
             ally.innerHTML='You found a match!'          
             cards[optionOneId].src='imgBam/blank.PNG';   
-            cards[optionOneId].style='width:221px; height:127px;  '    
+            cards[optionOneId].style="max-width:221px; max-height:127px; display:flex"     
             cards[optionTwoId].src='imgBam/blank.PNG';    
-            cards[optionTwoId].style='width:221px; height:127px;  ' 
+            cards[optionTwoId].style="max-width:221px; max-height:127px; display:flex"
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
             cardsWon.push(cardsChosen[1]);          
         }else{           
             cards[optionOneId].src='imgBam/white.png';
-            cards[optionOneId].style='width:221px; height:127px;  '           
+            cards[optionOneId].style="max-width:221px; max-height:127px; display:flex"          
             cards[optionTwoId].src='imgBam/white.png';        
-            cards[optionTwoId].style='width:221px; height:127px;  '       
+            cards[optionTwoId].style="max-width:221px; max-height:127px; display:flex"      
             ally.innerHTML='Sorry try again!'         
             //alert('Sorry try again!');
         }    
@@ -110,21 +110,22 @@ function flipCard(e) {
             if (optionOneId === optionTwoId) {
                 ally.innerHTML='You have clicked the same image!';    
             target.src='imgBam/white.png';   
-            target.style='height:127px ; width:221px;'   
+            target.style="max-width:221px; max-height:127px; display:flex"'   
             }else{
                 if (cardsChosen[0][1] ===cardsChosen[1][1]){
                     ally.innerHTML='You found a match!'          
                     document.querySelectorAll('#grid .cardsize img')[optionOneId].src='imgBam/blank.PNG';   
-                    document.querySelectorAll('#grid .cardsize img')[optionOneId].style='width:221px; height:127px;  '  
+                    document.querySelectorAll('#grid .cardsize img')[optionOneId].style="max-width:221px; max-height:127px; display:flex"
                     target.src='imgBam/blank.PNG';
-                    target.style='width:221px; height:127px; ' 
+                    target.style="max-width:221px; max-height:127px; display:flex"
                     cards[optionOneId].removeEventListener('click', flipCard);
                     cards[optionTwoId].removeEventListener('click', flipCard);
                     cardsWon.push(cardsChosen[1]);          
                 }else{           
-                document.querySelectorAll('#grid .cardsize img')[optionOneId].src='imgBam/white.png';            
+                document.querySelectorAll('#grid .cardsize img')[optionOneId].src='imgBam/white.png';  
+                   document.querySelectorAll('#grid .cardsize img')[optionOneId].style=  "max-width:221px; max-height:127px; display:flex"
                     target.src='imgBam/white.png';    
-                    target.style='width:221px; height:127px; '       
+                    target.style="max-width:221px; max-height:127px; display:flex" 
                     ally.innerHTML='Sorry try again!'         
                     //alert('Sorry try again!');
                 }    
