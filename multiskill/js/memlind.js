@@ -90,9 +90,7 @@ function flipCard(e) {
     }else {if (cardsChosen.length === 2) {
           const cards = document.querySelectorAll('#grid .cardsize  img');    
             const optionOneId = cardsChosenIds[0];
-            const optionTwoId = cardsChosenIds[1]; 
-            optionOneId;
-            optionTwoId;    
+            const optionTwoId = cardsChosenIds[1];            
             if (optionOneId === optionTwoId) {
                 ally.innerHTML='You have clicked the same image!';    
             target.src='imgBam/white.png';      
@@ -112,18 +110,21 @@ function flipCard(e) {
                 }    
             }
         }
-        resultDisplay.innerHTML = cardsWon.length;
-        cardsChosen.splice(0,cardsChosen.length)// 0 is start and deletes the whole way
-        // or while (arr.length > 0) {  arr.pop();}  = the slower method
-        cardsChosenIds.splice(0,cardsChosenIds.length);
-        if (cardsWon.length == (cardArray.length/2)){
-            //alert or
-            resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
-            ally.innerHTML='';       
-        resp()
-        }
+           recount()
+      
     }  
 }
 
-  
+function recount(){
+        cardsChosen=[]//.splice(0,cardsChosen.length)// 0 is start and deletes the whole way        
+        cardsChosenIds=[]//.splice(0,cardsChosenIds.length);
+        if (cardsWon.length == (cardArray.length/2)){   
+            resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
+            ally.innerHTML='';       
+        resp()
+        }else{
+             document.querySelector('#result').innerHTML = cardsWon.length;
+        }
+}
+    
   
