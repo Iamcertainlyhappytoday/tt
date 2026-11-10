@@ -33,7 +33,7 @@ let cardId;
 createBoard();
 
  function checkMatch(){
-    const cards = document.querySelectorAll('#grid .cardsize img');
+    const cards = document.querySelectorAll('#grid  img');
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1];     
     if (optionOneId === optionTwoId) {
