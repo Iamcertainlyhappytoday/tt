@@ -1,4 +1,4 @@
-HTMLconst cardArray = [
+const cardArray = [
     {  name: 'a1',  img: '  imgBam/a1.JPG', },
     {  name: 'a2',  img: '  imgBam/a2.JPG', },
     {  name: 'a3',  img: '  imgBam/a3.JPG', },
