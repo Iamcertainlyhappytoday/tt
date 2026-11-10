@@ -12,7 +12,7 @@ HTMLconst cardArray = [
     {  name: 'a5',  img: '  imgBam/a5.JPG', },
     {  name: 'a6',  img: '  imgBam/a6.JPG', }
     ];
-const oldgrid=document.querySelector('#grid').innerHTML;
+const oldgrid=document.querySelector('#grid');
  //cardArray=cardArr.sort(()=> 0.5 - Math.random());
 const resultDisplay = document.querySelector('#result');
 const ally=document.querySelector('#alerter')
