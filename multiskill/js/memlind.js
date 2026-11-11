@@ -85,7 +85,7 @@ createBoard();
 
 function resp(){
     gridDisplaya()
-    cardsWon=[]    
+    cardsWon=0;    
     createBoard()
 }
 function flipCard(e) { 
