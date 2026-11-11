@@ -164,12 +164,14 @@
        
         <address><a href="tel:+77468898496"><span class="mail"> phone- 07468898496 <span class="mail"></a> </address>
     </section>
-    <p > <span class="contact">     Trailtour </span> Copyright &copy; 2021<span class="contact">     BrightCalmIllustrations </span> 
+    <p > <span class="contact">     Trailtour </span> Copyright &copy;<span id='copy'></span><span class="contact">     BrightCalmIllustrations </span> 
     </p>
     
     </footer>
 </body>
 <script>
+    let copy = document.querySelector('#copy')
+    copy.innerHTML=newDate().getFullYear()
 /*  let showerLoc=document.querySelector('body');
 let pp=document.querySelector('#pp');
 showerLoc.addEventListener('mouseover', shower, false);
