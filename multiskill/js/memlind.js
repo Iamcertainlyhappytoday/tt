@@ -27,8 +27,7 @@ const resultDisplay = document.querySelector('#result');
 const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
-let cardsWon=[];
-let cardsWonlen;
+let cardsWon=0;
 let cardId;
 
  function createBoard(){   
@@ -60,7 +59,7 @@ createBoard();
             cards[optionTwoId].style="max-width:221px; max-height:127px; display:flex"
             cards[optionOneId].removeEventListener('click', flipCard);
             cards[optionTwoId].removeEventListener('click', flipCard);
-            cardsWon.push(cardsChosen[1]);          
+            cardsWon+=1;          
         }else{           
             cards[optionOneId].src='imgBam/white.png';
             cards[optionOneId].style="max-width:221px; max-height:127px; display:flex"          
@@ -71,14 +70,14 @@ createBoard();
         }    
     }
 }
-if(cardsWon.length===0){cardsWonlen=0}else{cardsWonlen= cardsWon.length}
-    resultDisplay.innerHTML = cardsWonlen;
+
+    resultDisplay.innerHTML = cardsWon;
     cardsChosen.splice(0,cardsChosen.length)// 0 is start and deletes the whole way
     // or while (arr.length > 0) {  arr.pop();}  = the slower method
     cardsChosenIds.splice(0,cardsChosenIds.length);
     if (cardsWon.length == (cardArray.length/2)){
         //alert or
-        resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
+        resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon+'<br>try again?';
         ally.innerHTML='';       
     resp()
 }
@@ -122,7 +121,7 @@ function flipCard(e) {
                     target.style="max-width:221px; max-height:127px; display:flex"
                     cards[optionOneId].removeEventListener('click', flipCard);
                     cards[optionTwoId].removeEventListener('click', flipCard);
-                    cardsWon.push(cardsChosen[1]);          
+                    cardsWon+=1;          
                 }else{           
                 document.querySelectorAll('#grid .cardsize img')[optionOneId].src='imgBam/white.png';  
                    document.querySelectorAll('#grid .cardsize img')[optionOneId].style=  "max-width:221px; max-height:127px; display:flex"
@@ -141,12 +140,12 @@ function flipCard(e) {
 function recount(){
         cardsChosen=[]//.splice(0,cardsChosen.length)// 0 is start and deletes the whole way        
         cardsChosenIds=[]//.splice(0,cardsChosenIds.length);
-        if (cardsWon.length == (cardArray.length/2)){   
-            resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon.length+'<br>try again?';
+        if (cardsWon == (cardArray.length/2)){   
+            resultDisplay.innerHTML = ' congratulations, you\'ve found all '+cardsWon+'<br>try again?';
             ally.innerHTML='';       
         resp()
         }else{
-             document.querySelector('#result').innerHTML = cardsWonlen;
+             document.querySelector('#result').innerHTML = cardsWon;
         }
 }
     
