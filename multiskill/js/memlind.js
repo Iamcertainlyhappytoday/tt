@@ -28,6 +28,7 @@ const ally=document.querySelector('#alerter')
 let cardsChosen=[];
 let cardsChosenIds = [];
 let cardsWon=[];
+let cardsWonlen;
 let cardId;
 
  function createBoard(){   
@@ -70,7 +71,8 @@ createBoard();
         }    
     }
 }
-    resultDisplay.innerHTML = cardsWon.length;
+if(cardsWon.length===0){cardsWonlen=0}else{cardsWonlen= cardsWon.length}
+    resultDisplay.innerHTML = cardsWonlen;
     cardsChosen.splice(0,cardsChosen.length)// 0 is start and deletes the whole way
     // or while (arr.length > 0) {  arr.pop();}  = the slower method
     cardsChosenIds.splice(0,cardsChosenIds.length);
@@ -144,7 +146,7 @@ function recount(){
             ally.innerHTML='';       
         resp()
         }else{
-             document.querySelector('#result').innerHTML = cardsWon.length;
+             document.querySelector('#result').innerHTML = cardsWonlen;
         }
 }
     
